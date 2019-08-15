@@ -1,21 +1,17 @@
-$(document) .ready(function()){
-  function  onclick
-}
+$(document).ready(function(){
+  $("#animalButton").click(function(event) {
+    $('.animalbox').hide();
 
-// this creates our first global  function and it is ready from the beggining of opening the page becasuse of the ready before function
-$(document).ready(function() {
-askUser();
+    if ($("#animal").val()==="armadillo lizard"){
+      $(".armadillo").show();
+    }
+    else if($("#animal").val()==="Red Panda"){
+      $(".redpanda").show();
+    }
+    else if($("#animal").val()==="Black Panther"){
+      $(".blackpanther").show();
+    }
+
+    event.preventDefault();
+  });
 });
-// this function will repeat if the user get to the end of the else function
-function askUser() {
-  var age = parseInt(prompt("How old are you?"));
-
-  if (age >= 18) {
-    $('#ballet').show();
-  } else if (age < 18) {
-     $("#under-18").show();
-  } else {
-     alert("numbers only please")
-     askUser();
-  }
-}
